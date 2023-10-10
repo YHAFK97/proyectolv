@@ -33,10 +33,8 @@
     <tr>
         <td>{{$producto->id}}</td>
         <td>
-
             <img class="img-thumbnail img-fluid" src="{{asset('storage').'/'.$producto->Foto}}" width="60"
                 alt="">
-
         </td>
         <td>{{$producto->Nombre}}</td>
         <td>{{$producto->Descripcion}}</td>
@@ -46,10 +44,8 @@
         <td>{{$producto->Proveedor_id}}</td>
         <td>
             <a href="{{url('/producto/'.$producto->id.'/edit')}}" class="btn btn-warning">
-
                 Editar
             </a>
-
             |
             <form action="{{url('/producto/'.$producto->id)}}" class="d-inline" method="post">
                 @csrf

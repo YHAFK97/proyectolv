@@ -37,9 +37,7 @@
         }
     </script>
 </head>
-
 <body>
-
 <div id="loading-screen">
         <div id="loader"></div>
       
@@ -69,9 +67,9 @@
                         <li class="nav-item">
                             <a class="nav-link" href="{{ route('producto.index') }}">{{ __(' Producto') }}</a>
                         </li>
-                        <li class="nav-item">
+                       <!-- <li class="nav-item">
                             <a class="nav-link" href="{{ route('producto.index') }}">{{ __(' Proveedor') }}</a>
-                        </li>
+                        </li>  -->
                     </ul>
                     @endif
 

@@ -13,9 +13,9 @@
     <a href="{{url('empleado/create')}}" class="btn btn-success">Registrar Empleado</a>
     <br>
     <br>
-    <table class="table table-light">
+    <table class="table table-light ">
 
-        <thead class="thead-light">
+        <thead class="thead-light " >
             <tr>
                 <th>ID</th>
                 <th>Foto</th>
@@ -32,10 +32,8 @@
             <tr>
                 <td>{{$empleado->id}}</td>
                 <td>
-
                     <img class="img-thumbnail img-fluid" src="{{asset('storage').'/'.$empleado->foto}}" width="60"
                         alt="">
-
                 </td>
                 <td>{{$empleado->nombre}}</td>
                 <td>{{$empleado->apellido}}</td>
@@ -43,10 +41,8 @@
                 <td>{{$empleado->telefono}}</td>
                 <td>
                     <a href="{{url('/empleado/'.$empleado->id.'/edit')}}" class="btn btn-warning">
-
                         Editar
-                    </a>
-
+                    </a>                    
                     |
                     <form action="{{url('/empleado/'.$empleado->id)}}" class="d-inline" method="post">
                         @csrf

@@ -149,7 +149,6 @@ return redirect('producto')->with('mensaje','Producto Modificado');
     public function destroy($id)
     {
         //
-
         $producto=Producto::findOrfail($id);
         //codigo si se tiene imagenes en el registro foto es el nombre de la base de datos
         if (Storage::delete('public/'.$producto->Foto)) {
