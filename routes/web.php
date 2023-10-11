@@ -5,6 +5,10 @@ use App\Http\Controllers\EmpleadoController;
 use App\Http\Controllers\ProductoController;
 use Illuminate\Routing\RouteGroup;
 
+Route::get('/storage/uploads/{filename}', function ($filename) {
+    return response()->file(storage_path('app/public/uploads/' . $filename));
+})->where('filename', '.*');
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes

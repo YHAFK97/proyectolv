@@ -51,7 +51,7 @@ $campos=[
     'Apellido' => 'required|string|max:100',
     'Correo' => 'required|email',
     'Telefono' => 'required|string|max:100',
-    'Foto' => 'required|max:10000|mimes:jpeg,png,jpg',
+    'Foto' => 'required|max:10000|mimes:jpeg,png,jpg,webp',
 
 
 ];
@@ -121,7 +121,7 @@ return view('empleado.edit', compact('empleado'));
         'required'=>'El :attribute es requerido',
         ];
         if ($request->hasFile('Foto')) {
-            $campos=['Foto' => 'required|max:10000|mimes:jpeg,png,jpg',];
+            $campos=['Foto' => 'required|max:10000|mimes:jpeg,png,jpg,webp',];
             $mensaje=['Foto.required' =>'La foto es requerida'];
 
         }

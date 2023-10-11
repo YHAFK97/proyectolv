@@ -46,7 +46,7 @@ class ProductoController extends Controller
         'Precio' => 'required|numeric',
         'Fecha_V' => 'required|date',
         'Proveedor_id' => 'required|integer',      
-        'Foto' => 'required|max:10000|mimes:jpeg,png,jpg',
+        'Foto' => 'required|max:10000|mimes:jpeg,png,jpg,webp',
         
         
         ];
@@ -117,7 +117,7 @@ return view('producto.edit', compact('producto'));
             'required'=>'El :attribute es requerido',
             ];
             if ($request->hasFile('Foto')) {
-                $campos=['Foto' => 'required|max:10000|mimes:jpeg,png,jpg',];
+                $campos=['Foto' => 'required|max:10000|mimes:jpeg,png,jpg,webp',];
                 $mensaje=['Foto.required' =>'La foto es requerida'];
     
             }
