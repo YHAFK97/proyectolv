@@ -1,7 +1,6 @@
+
 <h1>{{$modo}} Empleado</h1>
-
 @if(count($errors)>0)
-
 <div class="alert alert-danger" role="alert">
     <ul>
         <!-- Mostrar mensajes de error si la validación falla -->
@@ -11,11 +10,8 @@
         </li>
         @endforeach
     </ul>
-
 </div>
-
 @endif
-
 <br>
 <div class="form-group">
     <label for="Nombre">Nombre</label>
@@ -49,9 +45,6 @@
     <input type="file" class="form-control" name="Foto" value="" id="Foto">
     <br>
 </div>
-
 <input class="btn btn-success" type="submit" value="{{$modo}} Datos">
-
 <a class="btn btn-primary" href="{{url('empleado')}}">Regresar</a>
-
 <br>

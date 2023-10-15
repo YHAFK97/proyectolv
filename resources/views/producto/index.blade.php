@@ -1,25 +1,22 @@
 @extends('layouts.app')
 @section('content')
 <div class="container">
-
 @if(Session::has('mensaje'))
         <div class="alert alert-success alert-dismissible fade show" role="alert">
         {{ Session::get('mensaje') }}
   <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
     </div>
         @endif
-
 <a href="{{url('producto/create')}}" class="btn btn-success">Registrar Producto</a>
     <br>
     <br>
 <table class="table table-light">
-
 <thead class="thead-light">
     <tr>
         <th>ID</th>
-        <th>Foto</th>       
+        <th>Foto</th>
         <th>Nombre</th>
-        <th>Descripcion</th>     
+        <th>Descripcion</th>
         <th>Stock</th>
         <th>Precio</th>
         <th>Fecha_V</th>
@@ -27,7 +24,6 @@
         <th>Acciones</th>
     </tr>
 </thead>
-
 <tbody>
     @foreach($productos as $producto)
     <tr>
@@ -45,14 +41,12 @@
         <td>
             <a href="{{url('/producto/'.$producto->id.'/edit')}}" class="btn btn-warning">
                 Editar
-            </a>
-            |
+            </a>            |
             <form action="{{url('/producto/'.$producto->id)}}" class="d-inline" method="post">
                 @csrf
                 {{ method_field('DELETE') }}
                 <input type="submit" onclick="return confirm('Quieres eliminar')" class="btn btn-danger"
                     value="Eliminar">
-
             </form>
         </td>
     </tr>

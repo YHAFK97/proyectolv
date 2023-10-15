@@ -21,27 +21,28 @@
     <!-- Scripts -->
     @vite(['resources/sass/app.scss', 'resources/js/app.js'])
 
-<!-- serviceWorker integrado P -->
+    <!-- serviceWorker integrado P -->
 
 
-<script>
-        if ('serviceWorker' in navigator) {
-            window.addEventListener('load', () => {
-                navigator.serviceWorker.register('/js/service-worker.js')
-                    .then((registration) => {
-                        console.log('Service Worker registrado con éxito:', registration);
-                    })
-                    .catch((error) => {
-                        console.error('Error al registrar el Service Worker:', error);
-                    });
-            });
-        }
+    <script>
+    if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+            navigator.serviceWorker.register('/js/service-worker.js')
+                .then((registration) => {
+                    console.log('Service Worker registrado con éxito:', registration);
+                })
+                .catch((error) => {
+                    console.error('Error al registrar el Service Worker:', error);
+                });
+        });
+    }
     </script>
 </head>
+
 <body>
-<div id="loading-screen">
+    <div id="loading-screen">
         <div id="loader"></div>
-      
+
     </div>
 
     <div id="app">
@@ -58,7 +59,7 @@
 
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <!-- Left Side Of Navbar -->
-                    
+
                     @if(Auth::check())
                     <!-- Verifica si el usuario está autenticado -->
                     <ul class="navbar-nav me-auto">
@@ -68,15 +69,11 @@
                         <li class="nav-item">
                             <a class="nav-link" href="{{ route('producto.index') }}">{{ __(' Producto') }}</a>
                         </li>
-                       <!-- <li class="nav-item">
+                        <!-- <li class="nav-item">
                             <a class="nav-link" href="{{ route('producto.index') }}">{{ __(' Proveedor') }}</a>
                         </li>  -->
                     </ul>
                     @endif
-
-
-
-
                     <!-- Right Side Of Navbar -->
                     <ul class="navbar-nav ms-auto">
                         <!-- Authentication Links -->
@@ -121,11 +118,11 @@
         </main>
     </div>
     <script>
-        window.addEventListener('load', function () {
-            var contenedor = document.getElementById('loading-screen');
-            contenedor.style.visibility = 'hidden';
-            contenedor.style.opacity = '0';
-        });
+    window.addEventListener('load', function() {
+        var contenedor = document.getElementById('loading-screen');
+        contenedor.style.visibility = 'hidden';
+        contenedor.style.opacity = '0';
+    });
     </script>
 </body>
 

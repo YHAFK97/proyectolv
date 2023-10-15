@@ -1,11 +1,17 @@
+<div class ="background-image">
 @extends('layouts.app')
 
 @section('content')
 <div class="container">
+    <style>
+    .container {
+      font-weight: bold;
+    }
+  </style>
     <div class="row justify-content-center">
         <div class="col-md-8">
-            <div class="card">
-                <div class="card-header">{{ __('Register') }}</div>
+            <div class="login-form">
+                <div class="card-header"><h1>{{ __('Registrar') }}</div>
 
                 <div class="card-body">
                     <form method="POST" action="{{ route('register') }}">
@@ -64,7 +70,7 @@
                         <div class="row mb-0">
                             <div class="col-md-6 offset-md-4">
                                 <button type="submit" class="btn btn-primary">
-                                    {{ __('Register') }}
+                                    {{ __('Registrar') }}
                                 </button>
                             </div>
                         </div>
@@ -75,3 +81,4 @@
     </div>
 </div>
 @endsection
+</div>
