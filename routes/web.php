@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\EmpleadoController;
 use App\Http\Controllers\ProductoController;
+use App\Http\Controllers\ClienteController;
 use Illuminate\Routing\RouteGroup;
 
 Route::get('/storage/uploads/{filename}', function ($filename) {
@@ -31,6 +32,7 @@ Route::get('/empleado/create', [EmpleadoController::class, 'create']);
 */
 Route::resource('empleado', EmpleadoController::class)->middleware('auth');
 Route::resource('producto', ProductoController::class)->middleware('auth');
+Route::resource('cliente', ClienteController::class)->middleware('auth');
 //codigo ppara sacar el register y reset
 Auth::routes([/*'register'=>false,*/'reset'=>false]); /*Eliminar esto para registrar  ( 'register'=>false,) */
 

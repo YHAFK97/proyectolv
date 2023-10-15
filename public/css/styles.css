@@ -36,6 +36,21 @@ html {
     width: 600px;
     backdrop-filter: blur(15px);
 }
+.form-group {
+    position: relative;
+    background: transparent;
+    /* Fondo transparente (negro con 50% de opacidad) */
+    padding: 60px;
+    border-radius: 20px;
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    /* Valor de opacidad para los bordes */
+    color: rgba(255, 255, 255, 0.8);
+    /* Texto blanco con 80% de opacidad */
+    text-align: center;
+    margin: 100px auto;
+    width: 600px;
+    backdrop-filter: blur(15px);
+}
 b {
     color: #fff;
     text-align: center;

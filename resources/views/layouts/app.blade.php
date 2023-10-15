@@ -69,6 +69,9 @@
                         <li class="nav-item">
                             <a class="nav-link" href="{{ route('producto.index') }}">{{ __(' Producto') }}</a>
                         </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ route('cliente.index') }}">{{ __(' Cliente') }}</a>
+                        </li>
                         <!-- <li class="nav-item">
                             <a class="nav-link" href="{{ route('producto.index') }}">{{ __(' Proveedor') }}</a>
                         </li>  -->
