@@ -1,0 +1,8 @@
+npm run dev
+php artisan serve
+
+//API rest 
+npx json-server --watch database/db.json --port 3000
+
+///para ver los mensajes de mailtrap
+https://mailtrap.io/inboxes/2489846/messages

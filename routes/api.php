@@ -2,7 +2,8 @@
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\PointController;
+use App\Http\Controllers\ApiController;
 /*
 |--------------------------------------------------------------------------
 | API Routes
@@ -17,3 +18,9 @@ use Illuminate\Support\Facades\Route;
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+// Añadir la ruta para cualquier método HTTP en '/api/points'
+Route::any('/api/points', [ApiController::class, 'postDataToServer']);
+
+// Ruta para recuperar un punto específico
+Route::get('/points/{id}', [PointController::class, 'show']);

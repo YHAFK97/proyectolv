@@ -2,7 +2,7 @@
 @section('content')
 <div class="background-image">
 </div>
-< <div class="container">
+<div class="container">
     @if(Session::has('mensaje'))
     <div class="alert alert-success alert-dismissible fade show" role="alert">
         {{ Session::get('mensaje') }}
@@ -49,5 +49,5 @@
         </tbody>
     </table>
     {!! $clientes->links() !!}
-    </div>
-    @endsection
+</div>
+@endsection
